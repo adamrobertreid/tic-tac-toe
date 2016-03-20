@@ -2,8 +2,8 @@
 $(document).ready(function() {
   // all code to manipulate the DOM
   // goes inside this function
-  var playerOne = "X";
-  var playerTwo = "O";
+  var playerOne = 'X';
+  var playerTwo = 'O';
   var count = 0;
   var tacBoxes = $(".box");
 
@@ -16,32 +16,80 @@ $(document).ready(function() {
         $(this).text(playerTwo);
         count++;
       }
+      winner();
     }
-  });
-  if
-$("#a"&&"#b"&&"#c").on("click", function winner(event){
-  if(playerOne){
-  alert("Winner");
-}
 });
-/*
-    alert("Player One You are a Winner!!");
+  function winner(){
+    var gameWinner = " ";
+    if( ($(tacBoxes.eq(0)).text()==="X" &&
+         $(tacBoxes.eq(1)).text()==="X" &&
+         $(tacBoxes.eq(2)).text()==="X" ) ||
+        ($(tacBoxes.eq(3)).text()==="X" &&
+         $(tacBoxes.eq(4)).text()==="X" &&
+         $(tacBoxes.eq(5)).text()==="X" ) ||
+        ($(tacBoxes.eq(6)).text()==="X" &&
+         $(tacBoxes.eq(7)).text()==="X" &&
+         $(tacBoxes.eq(8)).text()==="X" ) ||
+        ($(tacBoxes.eq(0)).text()==="X" &&
+         $(tacBoxes.eq(4)).text()==="X" &&
+         $(tacBoxes.eq(8)).text()==="X" ) ||
+        ($(tacBoxes.eq(2)).text()==="X" &&
+         $(tacBoxes.eq(4)).text()==="X" &&
+         $(tacBoxes.eq(6)).text()==="X" ) ||
+        ($(tacBoxes.eq(0)).text()==="X" &&
+         $(tacBoxes.eq(3)).text()==="X" &&
+         $(tacBoxes.eq(6)).text()==="X" ) ||
+        ($(tacBoxes.eq(1)).text()==="X" &&
+         $(tacBoxes.eq(4)).text()==="X" &&
+         $(tacBoxes.eq(7)).text()==="X" ) ||
+        ($(tacBoxes.eq(2)).text()==="X" &&
+         $(tacBoxes.eq(5)).text()==="X" &&
+         $(tacBoxes.eq(8)).text()==="X" )){
+          gameWinner = "Player One";
+   }else if( ($(tacBoxes.eq(0)).text()==="O" &&
+              $(tacBoxes.eq(1)).text()==="O" &&
+              $(tacBoxes.eq(2)).text()==="O" ) ||
+             ($(tacBoxes.eq(3)).text()==="O" &&
+              $(tacBoxes.eq(4)).text()==="O" &&
+              $(tacBoxes.eq(5)).text()==="O" ) ||
+             ($(tacBoxes.eq(6)).text()==="O"&&
+              $(tacBoxes.eq(7)).text()==="O" &&
+              $(tacBoxes.eq(8)).text()==="O" ) ||
+             ($(tacBoxes.eq(0)).text()==="O" &&
+              $(tacBoxes.eq(4)).text()==="O" &&
+              $(tacBoxes.eq(8)).text()==="O" ) ||
+             ($(tacBoxes.eq(2)).text()==="O" &&
+              $(tacBoxes.eq(4)).text()==="O" &&
+              $(tacBoxes.eq(6)).text()==="O" ) ||
+             ($(tacBoxes.eq(0)).text()==="O" &&
+              $(tacBoxes.eq(3)).text()==="O" &&
+              $(tacBoxes.eq(6)).text()==="O" ) ||
+             ($(tacBoxes.eq(1)).text()==="O" &&
+              $(tacBoxes.eq(4)).text()==="O" &&
+              $(tacBoxes.eq(7)).text()==="O" ) ||
+             ($(tacBoxes.eq(2)).text()==="O" &&
+              $(tacBoxes.eq(5)).text()==="O" &&
+              $(tacBoxes.eq(8)).text()==="O" )){
+            gameWinner = "Player Two";
+              }else {
+                if(($(tacBoxes.eq(0)).text()==="" ||
+                           $(tacBoxes.eq(1)).text()==="" ||
+                           $(tacBoxes.eq(2)).text()==="" ||
+                           $(tacBoxes.eq(3)).text()==="" ||
+                           $(tacBoxes.eq(4)).text()==="" ||
+                           $(tacBoxes.eq(5)).text()==="" ||
+                           $(tacBoxes.eq(6)).text()==="" ||
+                           $(tacBoxes.eq(7)).text()==="" ||
+                           $(tacBoxes.eq(8)).text()==="" )){
+                             gameWinner = '';
+                           }else gameWinner = ("Draw");
+          }
+          console.log (gameWinner);
+          return gameWinner;
 
-  }else if(playerTwo == ("#1"&&"#2"&&"#3")||("#4"&&"#5"&&"#6")||
-                         ("#7"&&"#8"&&"#9")||("#1"&&"#5"&&"#9")||
-                         ("#3"&&"#5"&&"#6")||("#1"&&"#4"&&"#7")||
-                         ("#2"&&"#5"&&"#8")||("#3"&&"#6"&&"#9")){
-
-      alert("Player Two You are a Winner!!");
-
-    }else {
-      alert("It's a Draw");
-}
-*/
-
-
-  $(".btn").on("click", function restartGame(event){
-       $(".box").text("");
+    }
+    
+       $(".btn").on("click", function restartGame(event){
+            $(".box").text("");
+       });
   });
-
-});
