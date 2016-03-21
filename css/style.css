@@ -11,13 +11,7 @@ h1{
 font-family: 'Frijole', cursive;
 font-size: 100px;
 color: red;
-
 }
-.counter{
-
-}
-
-
 .box {
   border-radius: 25px;
   border: 1px solid black;
@@ -25,21 +19,60 @@ color: red;
   text-align: center;
   color: Black;
   font-size: 700%;
+  box-shadow: 5px 5px 5px black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: light grey;
 
 }
 
 
 #board {
   margin-top: 10px;
+
+}
+.counter{
+  position: relative;
+  left: 25%;
 }
 #counter1{
-  border: 1px solid black;
-  height: 100px;
+  border-radius: 25px;
+  width: 200px;
+  border: 2px solid black;
+  height: 60px;
+  background-color: white;
+  margin:10px 10px 10px 10px;
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px black;
 }
 #counter2{
-  border: 1px solid black;
-  height: 100px;
+  border-radius: 25px;
+  width: 200px;
+  border: 2px solid black;
+  height: 60px;
   margin-bottom: 10px;
+  background-color: white;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  color: blue;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px black;
+}
+#draws{
+  border-radius: 25px;
+  width: 200px;
+  border: 2px solid black;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: white;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  color: green;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .box {
@@ -47,4 +80,23 @@ color: red;
   height: 150px;
   text-align: center;
   justify-content: center;
+}
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 23px;
+  line-height: 1.5;
+  border-radius: 6px;
+}
+#btn1{
+  margin-top: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#btn2{
+  margin-bottom: 50px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }

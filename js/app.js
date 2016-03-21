@@ -21,6 +21,9 @@ $(document).ready(function() {
       }
       winner();
       countsWinner();
+      $("#counter1").text(count1);
+      $("#counter2").text(count2);
+      $("#draws").text(countd);
     }
 });
   function winner(){
@@ -49,7 +52,7 @@ $(document).ready(function() {
         ($(tacBoxes.eq(2)).text()==="X" &&
          $(tacBoxes.eq(5)).text()==="X" &&
          $(tacBoxes.eq(8)).text()==="X" )){
-          gameWinner = "playerOneWins";
+          gameWinner = "Player One You Win!";
    }else if( ($(tacBoxes.eq(0)).text()==="O" &&
               $(tacBoxes.eq(1)).text()==="O" &&
               $(tacBoxes.eq(2)).text()==="O" ) ||
@@ -74,7 +77,7 @@ $(document).ready(function() {
              ($(tacBoxes.eq(2)).text()==="O" &&
               $(tacBoxes.eq(5)).text()==="O" &&
               $(tacBoxes.eq(8)).text()==="O" )){
-            gameWinner = "playerTwoWins";
+            gameWinner = "Player Two You Win!";
           }else {
           if(($(tacBoxes.eq(0)).text()==="" ||
                     $(tacBoxes.eq(1)).text()==="" ||
@@ -94,11 +97,11 @@ $(document).ready(function() {
           }
           function countsWinner(){
             var gameWinner = winner();
-          if(gameWinner === "playerOneWins"){
+          if(gameWinner === "Player One You Win!"){
             alert(gameWinner);
             count1++;
             console.log(count1);
-          }else if (gameWinner === "playerTwoWins") {
+          }else if (gameWinner === "Player Two You Win!") {
             alert(gameWinner);
             count2++;
             console.log(count2);
@@ -110,8 +113,12 @@ $(document).ready(function() {
         }
        $(".btn").on("click", function restartGame(event){
             $(".box").text("");
+
        });
        $("#btn2").on("click", function resetWholeGame(event){
          window.location.reload();
+         $("#counter1").text("");
+         $("#counter2").text("");
+         $("#draws").text("");
        });
 });
