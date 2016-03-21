@@ -1,6 +1,45 @@
+body {
+    background-image:url("http://i.imgur.com/Ey9vapD.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+h1{
+font-family: 'Frijole', cursive;
+font-size: 100px;
+color: red;
+
+}
+.counter{
+
+}
+
+
+.box {
+  border-radius: 25px;
+  border: 1px solid black;
+  height: 150px;
+  text-align: center;
+  color: Black;
+  font-size: 700%;
+
+}
+
 
 #board {
   margin-top: 10px;
+}
+#counter1{
+  border: 1px solid black;
+  height: 100px;
+}
+#counter2{
+  border: 1px solid black;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 .box {

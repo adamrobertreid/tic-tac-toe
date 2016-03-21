@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
 
     <!-- set viewport to device width to allow responsiveness -->
@@ -22,7 +23,7 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-  <div class="container">
+
     <div class="row text-center">
       <div class="col-md-12">
         <h1>Tic Tac Toe</h1>
@@ -36,24 +37,30 @@
       <div class="col-md-6 col-md-offset-3" id="board">
 
         <!-- you can put rows inside of columns! -->
-        <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
+        <h2>Player One</h2><!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
+        <div class="counter">
+          <div class="col-md-6 col-md-offset-3" id="counter1"></div>
+          <div class="col-md-6 col-md-offset-3" id="counter2"></div>
+        </div>
         <div class="row1">
-          <div class="col-sm-4 box" id="a"></div>
-          <div class="col-sm-4 box" id="b"></div>
-          <div class="col-sm-4 box" id="c"></div>
+          <div class="col-xs-4 box" id="a"></div>
+          <div class="col-xs-4 box" id="b"></div>
+          <div class="col-xs-4 box" id="c"></div>
         </div>
         <div class="row2">
-          <div class="col-sm-4 box" id="d"></div>
-          <div class="col-sm-4 box" id="e"></div>
-          <div class="col-sm-4 box" id="f"></div>
+          <div class="col-xs-4 box" id="d"></div>
+          <div class="col-xs-4 box" id="e"></div>
+          <div class="col-xs-4 box" id="f"></div>
         </div>
         <div class="row3">
-          <div class="col-sm-4 box" id="g"></div>
-          <div class="col-sm-4 box" id="h"></div>
-          <div class="col-sm-4 box" id="i"></div>
+          <div class="col-xs-4 box" id="g"></div>
+          <div class="col-xs-4 box" id="h"></div>
+          <div class="col-xs-4 box" id="i"></div>
         </div>
-        <button type="button" class="btn btn-danger btn-block">Reset</button>
+        <button type="button" class="btn btn-info btn-block">Reset</button>
         <button type="button" class="btn btn-danger btn-block" id="btn2">Restart</button>
+      </div>
+      <div>
       </div>
     </div>
   </div>
