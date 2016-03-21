@@ -24,6 +24,10 @@ color: red;
   margin-right: 10px;
   margin-bottom: 20px;
   background-color: light grey;
+  border: 1px solid black;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
 
 }
 
@@ -33,8 +37,9 @@ color: red;
 
 }
 .counter{
-  position: relative;
-  left: 25%;
+  text-align: center;
+
+  margin: 0 auto;
 }
 #counter1{
   border-radius: 25px;
@@ -75,11 +80,9 @@ color: red;
   box-shadow: 5px 5px 5px black;
 }
 
-.box {
-  border: 1px solid black;
-  height: 150px;
-  text-align: center;
-  justify-content: center;
+.box:active {
+background-color: yellow;
+opacity: 0.4;
 }
 .btn-lg {
   padding: 10px 16px;
