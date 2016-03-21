@@ -21,9 +21,9 @@ $(document).ready(function() {
       }
       winner();
       countsWinner();
-      $("#counter1").text(count1);
-      $("#counter2").text(count2);
-      $("#draws").text(countd);
+      $("#counter1").text('Player One ' + count1);
+      $("#counter2").text('Player Two ' + count2);
+      $("#draws").text('Draw '+ countd);
     }
 });
   function winner(){
@@ -79,7 +79,7 @@ $(document).ready(function() {
               $(tacBoxes.eq(8)).text()==="O" )){
             gameWinner = "Player Two You Win!";
           }else {
-          if(($(tacBoxes.eq(0)).text()==="" ||
+                if(($(tacBoxes.eq(0)).text()==="" ||
                     $(tacBoxes.eq(1)).text()==="" ||
                     $(tacBoxes.eq(2)).text()==="" ||
                     $(tacBoxes.eq(3)).text()==="" ||
